@@ -368,4 +368,4 @@ if __name__ == '__main__':
         logger.error(f"You must specify a {COLORS.get('YELLOW')}User-Agent{COLORS.get('RESET')} for Turnstile Solver or use {COLORS.get('GREEN')}camoufox{COLORS.get('RESET')} without useragent")
     else:
         app = create_app(headless=args.headless, debug=args.debug, useragent=args.useragent, browser_type=args.browser_type, thread=args.thread, proxy_support=args.proxy)
-        app.run(host=args.host, port=int(args.port))
+        app.run(host=args.host, port=int(args.port),startup_timeout=300)
